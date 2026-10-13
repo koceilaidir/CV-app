@@ -1,0 +1,54 @@
+name: cv_minerva
+description: "CV Minerva : choisissez un modèle, remplissez, générez votre CV en PDF ou JPG."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pdf: ^3.11.1
+  printing: ^5.13.4
+  shared_preferences: ^2.3.3
+  image_picker: ^1.1.2
+  image: ^4.3.0
+  file_saver: ^0.2.14
+  share_plus: ^10.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+    - assets/icon/
+  fonts:
+    - family: Sora
+      fonts:
+        - asset: assets/fonts/Sora_600SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Sora_700Bold.ttf
+          weight: 700
+    - family: Figtree
+      fonts:
+        - asset: assets/fonts/Figtree_400Regular.ttf
+        - asset: assets/fonts/Figtree_500Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Figtree_600SemiBold.ttf
+          weight: 600
+
+# Icône : `dart run flutter_launcher_icons`
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#1A2440"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+  min_sdk_android: 21
